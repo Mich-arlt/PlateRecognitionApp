@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>octavia-skoda-number-plate-poland.jpg</filename>
+	<path>D:\PlateRecognitionApp\images\octavia-skoda-number-plate-poland.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1400</width>
+		<height>500</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>number_plate</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1005</xmin>
+			<ymin>181</ymin>
+			<xmax>1157</xmax>
+			<ymax>223</ymax>
+		</bndbox>
+	</object>
+</annotation>
