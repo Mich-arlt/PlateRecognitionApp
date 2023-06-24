@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>dsc0017-jpg-eaf45906f9626e242c89.jpg</filename>
+	<path>D:\PlateRecognitionApp\images\dsc0017-jpg-eaf45906f9626e242c89.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1830</width>
+		<height>1155</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>number_plate</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>369</xmin>
+			<ymin>604</ymin>
+			<xmax>834</xmax>
+			<ymax>821</ymax>
+		</bndbox>
+	</object>
+</annotation>
