@@ -6,7 +6,7 @@ import keras
 
 model = keras.models.load_model("./Models/object_detection.h5")
 print("model loaded sucessfully")
-path = "./images/000FVWV8MS1T41RT-C122-F4.jpg"
+path = "./images/tablice-rejestracyjne-Ford-Mustang.jpg"
 
 
 def object_detection(path):

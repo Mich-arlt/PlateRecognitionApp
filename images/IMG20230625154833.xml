@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>IMG20230625154833.jpg</filename>
+	<path>D:\PlateRecognitionApp\images\IMG20230625154833.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>2592</width>
+		<height>4608</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>number_plate</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1297</xmin>
+			<ymin>1714</ymin>
+			<xmax>1414</xmax>
+			<ymax>1751</ymax>
+		</bndbox>
+	</object>
+</annotation>
