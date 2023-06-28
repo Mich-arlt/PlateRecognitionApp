@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div class="container">
+        <br><br>
+        <form action="#" method="POST" enctype="multipart/form-data">
+            <div class="input-group">
+                <input type="file" class="form-control" name="image_name" multiple accept=".jpg,.jpeg,.png" required>
+                <input type="submit" value="Upload" class="btn btn-outline-secondary">
+            </div>
+        </form>
+    </div>
+    {% if upload %}
+        <div class="container">
+            <br><br>
+            <table>
+                <tr>
+                    <th class="image-cell">Zdjęcie</th>
+                    <th class="text-cell">Tekst</th>
+                </tr>
+                {% for upload_image in upload_images %}
+                <tr>
+                    <td class="image-cell">
+                        <img class="rounded float-right img-fluid" src="/static/predict/{{upload_image}}" alt="">
+                    </td>
+                    <td class="text-cell">
+                         <h1 class="display-8" style="background-color: greenyellow; display: inline-block;"> {{texts[loop.index0]}}</h1>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+            <br>
+        </div>
+    {% endif %}
+{% endblock  %}

@@ -105,4 +105,4 @@ history = model.fit(
     callbacks=[tfb],
     initial_epoch=101,
 )
-model.save("./Models/object_detection.h5")
+model.save("web_app/static/Models/object_detection.h5")
