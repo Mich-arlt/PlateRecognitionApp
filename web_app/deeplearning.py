@@ -56,4 +56,6 @@ def OCR(path, filename):
     reader = easyocr.Reader(['en'], gpu=False)
     results = reader.readtext(roi_binary, width_ths=0.7, text_threshold=0.7, detail=0)
     final_answear = ' '.join(results)
+    if len(final_answear) > 10:
+        final_answear = final_answear[:10]
     return str(final_answear)

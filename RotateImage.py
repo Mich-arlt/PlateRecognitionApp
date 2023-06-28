@@ -49,24 +49,27 @@ def deskew(cvImage):
 
 def read_edges(color):
     gray = cv2.cvtColor(color, cv2.COLOR_BGR2GRAY)
-    plt.imshow(gray)
-    plt.show()
+    # plt.imshow(gray)
+    # plt.show()
     # Edge detection
     edges = cv2.Canny(gray, 100, 200, apertureSize=3)
-    plt.imshow(edges)
-    plt.show()
+    # plt.imshow(edges)
+    # plt.show()
     # Detect lines using hough transform
     polar_lines = cv2.HoughLines(edges, 1, np.pi / 180, 150)
-    h_lines = drawHoughLines(color, polar_lines)
-    plt.imshow(h_lines)
-    plt.show()
-    mean_angle = np.mean([line[0][1] for line in polar_lines])
-    # print(mean_angle)
-    # Konwersja kąta z radianów na stopnie
-    angle_degrees = -1*(90-np.rad2deg(mean_angle))
-    print("Kąt " + str(angle_degrees))
-    # print(all_lines)
-    return rotateImage(color, angle_degrees)
+    if len(polar_lines) > 0:
+        # h_lines = drawHoughLines(color, polar_lines)
+        # plt.imshow(h_lines)
+        # plt.show()
+        mean_angle = np.mean([line[0][1] for line in polar_lines])
+        # print(mean_angle)
+        # Konwersja kąta z radianów na stopnie
+        angle_degrees = -1*(90-np.rad2deg(mean_angle))
+        print("Kąt " + str(angle_degrees))
+        # print(all_lines)
+        return rotateImage(color, angle_degrees)
+    else:
+        return color
 
 
 def drawHoughLines(image, lines):
