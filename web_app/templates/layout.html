@@ -33,6 +33,44 @@
             width: 60%;
             text-align: center;
         }
+
+        .text-container {
+          background-color: #f0f0f0; /* Kolor tła */
+          padding: 10px; /* Wypełnienie wewnątrz kontenera */
+          border: 2px solid #000000; /* Obwódka */
+          border-radius: 5px; /* Zaokrąglenie rogów */
+        }
+
+        .text {
+          position: relative;
+          display: inline-block;
+          padding: 10px;
+          padding-left: 30px;
+          color: #000000;
+          font-size: 40px;
+        }
+
+        .text::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 20px; /* Szerokość paska po lewej stronie */
+          height: 100%; /* Wysokość paska */
+          background-color: #0000ff; /* Kolor paska */
+        }
+
+        .text::after {
+          content: "";
+          position: absolute;
+          left: -2px;
+          top: -2px;
+          right: -2px;
+          bottom: -2px;
+          border: 2px solid #000000;
+          border-radius: 5px;
+        }
     </style>
 </head>
 <body>

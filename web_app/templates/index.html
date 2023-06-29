@@ -24,7 +24,11 @@
                         <img class="rounded float-right img-fluid" src="/static/predict/{{upload_image}}" alt="">
                     </td>
                     <td class="text-cell">
-                         <h1 class="display-8" style="background-color: greenyellow; display: inline-block;"> {{texts[loop.index0]}}</h1>
+                        {% if texts[loop.index0] %}
+                            <div><h1 class="text">{{texts[loop.index0]}}</h1></div>
+                        {% else %}
+                            <div><h1 class="display-8">Nie znaleziono :(</h1></div>
+                        {% endif %}
                     </td>
                 </tr>
                 {% endfor %}

@@ -27,13 +27,13 @@ file_path = image_path[0]
 
 # weryfikacja danych
 
-img = cv2.imread(file_path)
+# img = cv2.imread(file_path)
 
-cv2.rectangle(img, (534, 320), (626, 344), (0, 0, 255), 1)
-cv2.namedWindow("example", cv2.WINDOW_NORMAL)
-cv2.imshow("example", img)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+# cv2.rectangle(img, (534, 320), (626, 344), (0, 0, 255), 1)
+# cv2.namedWindow("example", cv2.WINDOW_NORMAL)
+# cv2.imshow("example", img)
+# cv2.waitKey(0)
+# cv2.destroyAllWindows()
 
 # Przygotowanie do przetwarzania danych
 
