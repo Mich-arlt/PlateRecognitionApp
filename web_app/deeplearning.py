@@ -49,10 +49,14 @@ def OCR(path, filename):
         roi_rotated_raw = read_edges(roi)
     except:
         roi_rotated_raw = roi
-    # roi_rotated = np.clip(roi_rotated_raw * 1.5, 0, 255).astype(np.uint8)
     roi_gray = cv2.cvtColor(roi_rotated_raw, cv2.COLOR_BGR2GRAY)
-    roi_rotated_adjusted = cv2.equalizeHist(roi_gray)
-    _, roi_binary = cv2.threshold(roi_rotated_adjusted, 127, 255, cv2.THRESH_BINARY)
+    if np.mean(roi_gray) < 100:
+        roi_binary = np.clip(roi_gray * 1.5, 0, 255).astype(np.uint8)
+    elif np.mean(roi_gray) > 170:
+        roi_binary = roi_gray
+    else:
+        roi_binary = np.clip(roi_gray * 1.5, 0, 255).astype(np.uint8)
+        _, roi_binary = cv2.threshold(roi_binary, 127, 255, cv2.THRESH_BINARY)
     reader = easyocr.Reader(['en'], gpu=False)
     results = reader.readtext(roi_binary, width_ths=0.7, text_threshold=0.7, detail=0)
     final_answear = ' '.join(results)
